@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AgendaTec</title>
+</head>
+<body>
+
+<h1>AgendaTec</h1>
+<a href="{{ url_for('contacto.nuevo_contacto') }}">Nuevo contacto</a>
+
+<ul>
+    {% for c in contactos %}
+    <li>
+        {{ c.nombre }} – {{ c.telefono }} – {{ c.correo }}
+        [<a href="{{ url_for('contacto.editar_contacto', id=c.id) }}">Editar</a>]
+        [<a href="{{ url_for('contacto.eliminar_contacto', id=c.id) }}">Eliminar</a>]
+    </li>
+    {% endfor %}
+</ul>
+
+</body>
+</html>

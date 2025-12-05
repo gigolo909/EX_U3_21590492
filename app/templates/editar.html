@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Editar Contacto</title>
+</head>
+<body>
+    <h1>Editar contacto</h1>
+
+    <form action="{{ url_for('contacto.actualizar_contacto', id=contacto.id) }}" method="POST">
+        
+        <label>Nombre:</label>
+        <input type="text" name="nombre" value="{{ contacto.nombre }}" required><br>
+
+        <label>Teléfono:</label>
+        <input type="text" name="telefono" value="{{ contacto.telefono }}" required><br>
+
+        <label>Correo:</label>
+        <input type="email" name="correo" value="{{ contacto.correo }}" required><br>
+
+        <button type="submit">Actualizar</button>
+        <a href="{{ url_for('contacto.listar_contactos') }}">Cancelar</a>
+    </form>
+</body>
+</html>
