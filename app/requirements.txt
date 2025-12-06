@@ -1,6 +1,7 @@
-flask
+echo "flask
 flask_sqlalchemy
-flask_marshmallow
 psycopg2-binary
 gunicorn
 python-dotenv
+flask-marshmallow
+marshmallow-sqlalchemy" > requirements.txt
